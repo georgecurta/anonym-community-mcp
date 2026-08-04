@@ -1,0 +1,49 @@
+{
+  "name": "anonym-community-mcp",
+  "version": "2.0.0",
+  "description": "Read-only MCP server for the anonym.community privacy research corpus — 1,478 documented PII pain points, 98 structural root causes, a 240-jurisdiction privacy-law directory, 134 evidence-backed FAQs, and 1,600+ cited academic papers, queryable from Claude Desktop, Claude Code, Cursor and any MCP client.",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "claude",
+    "claude-desktop",
+    "claude-code",
+    "cursor",
+    "ai-agent",
+    "llm-tools",
+    "privacy",
+    "gdpr",
+    "pii",
+    "pii-anonymization",
+    "data-protection",
+    "compliance",
+    "eu-ai-act",
+    "research-dataset",
+    "privacy-research"
+  ],
+  "homepage": "https://anonym.community",
+  "bugs": {
+    "url": "https://github.com/georgecurta/anonym-community-mcp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgecurta/anonym-community-mcp.git"
+  },
+  "license": "MIT",
+  "author": "George Curta (https://curta.solutions)",
+  "main": "index.js",
+  "bin": {
+    "anonym-community-mcp": "./index.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "node index.js --selftest"
+  }
+}

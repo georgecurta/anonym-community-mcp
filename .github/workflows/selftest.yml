@@ -1,0 +1,23 @@
+name: Self-test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    # weekly, so a change on anonym.community's own /data/*.json shape is caught
+    # even with no commits here
+    - cron: '17 6 * * 1'
+  workflow_dispatch: {}
+
+jobs:
+  selftest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run against the live corpus
+        run: node index.js --selftest
